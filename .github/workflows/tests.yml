@@ -1,31 +1,29 @@
-name: First_YAML_Tests
+name: Python CI
 
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        python-version: [3.11]
 
     steps:
-      - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Setting Python Up
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{matrix.python-version}}
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
 
-      - name: Dependency Installation
-        run: pip install -r requirements.txt
-        working-directory: ./Tests
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+      working-directory: ./Tests
 
-      - run:
-          python WordHidder_test.py
-        working-directory: ./Tests
-        
+    - name: Run tests
+      run: |
+        python -m unittest WordHidder_test.py
+      working-directory: ./Tests

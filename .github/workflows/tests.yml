@@ -21,9 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-      working-directory: Tests
 
     - name: Run tests
       run: |
         python -m unittest WordHidder_test.py
-      working-directory: Tests

@@ -6,7 +6,7 @@ on:
       -main
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     
     strategy:
@@ -23,7 +23,9 @@ jobs:
 
       - name: Dependency Installation
         run: pip install -r requirements.txt
+        working-directory: ./Tests
 
       - run:
           python WordHidder_test.py
+        working-directory: ./Tests
         

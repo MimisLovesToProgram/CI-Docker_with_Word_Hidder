@@ -39,7 +39,7 @@ def HideWord(word):
                         result += i
                     else:
                         result += i.upper()
-    return result.lower()
+    return result
 
 if __name__ == "__main__":
     print(HideWord(input("Enter a word (Greek or English): ")))

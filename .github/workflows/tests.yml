@@ -20,4 +20,5 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m unittest WordHidder_test.py
+        python WordHidder_test.py
+

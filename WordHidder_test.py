@@ -8,7 +8,8 @@ class Tests(unittest.TestCase):
     
     def test_CapitalizationExists(self):
         word = "programming"
-        self.assertNotEqual(HideWord(word), HideWord(word).lower())
-        self.assertNotEqual(HideWord(word), HideWord(word).upper())
+        hidden_text = HideWord(word)
+        self.assertNotEqual(hidden_text, hidden_text.lower())
+        self.assertNotEqual(hidden_text, hidden_text.upper())
 
 unittest.main()

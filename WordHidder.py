@@ -6,7 +6,7 @@ def HideWord(word):
 
     result = ""
     if word[0] in en_alphabet:
-        length = random.randrange(100, 201)
+        length = random.randrange(250, 351)
         pos = random.randrange(20, length)
         for i in range(length + len(word)):
             if not i == pos:
@@ -23,7 +23,7 @@ def HideWord(word):
                     else:
                         result += i.upper()
     else:
-        length = random.randrange(100, 201)
+        length = random.randrange(250, 351)
         pos = random.randrange(20, length)
         for i in range(length + len(word)):
             if not i == pos:

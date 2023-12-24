@@ -1,7 +1,7 @@
 **Word Hidder**
 
 Word Hidder is a very simple project that hides a Greek or English word in a mess of random characters of the word's language, built solely 
-with the intention to illustrate the use of CI using GitHub Actions.
+with the intention to illustrate the use of CI using GitHub Actions, and Docker.
 
 The project consists of:
 - *WordHidder.py:* The project's word hidding script, performing the actions mentioned above.
